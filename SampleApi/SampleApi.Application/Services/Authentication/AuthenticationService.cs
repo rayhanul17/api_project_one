@@ -1,5 +1,4 @@
 ﻿using SampleApi.Application.Common.Interfaces.Authentication;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace SampleApi.Application.Services.Authentication;
 
@@ -38,14 +37,14 @@ public class AuthenticationService : IAuthenticationService
     }
 
     public AuthenticationResult Login(string email, string password)
-    {      
+    {
 
         return new AuthenticationResult(Guid.NewGuid(),
                                         string.Empty,
                                         string.Empty,
                                         email,
-                                        password,                                        
+                                        password,
                                         string.Empty);
     }
-    
+
 }
