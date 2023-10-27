@@ -5,8 +5,7 @@ public record AuthenticationResult(
     string FullName,
     string UserName,
     string Email,
-    string Password,
-    string Image,
+    string Password,    
     string Token
 );
 
