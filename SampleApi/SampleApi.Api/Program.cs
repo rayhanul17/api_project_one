@@ -1,3 +1,4 @@
+using SampleApi.Api.Middleware;
 using SampleApi.Application;
 using SampleApi.Infrastructure;
 
@@ -20,10 +21,8 @@ var app = builder.Build();
         app.UseSwaggerUI();
     }
 
+    app.UseMiddleware<ErroHandlingMiddleware>();
     app.UseHttpsRedirection();
-
-    app.UseAuthorization();
-
     app.MapControllers();
 
     app.Run();
