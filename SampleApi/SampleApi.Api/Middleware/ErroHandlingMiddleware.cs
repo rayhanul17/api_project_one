@@ -27,7 +27,7 @@ public class ErroHandlingMiddleware
     private static Task HandleExceptionAsync(HttpContext context, Exception exception)
     {
         var code = HttpStatusCode.InternalServerError; //500 if unexpected
-        var result = JsonSerializer.Serialize(new { error = "An error occurred" });
+        var result = JsonSerializer.Serialize(new { error = "An error occurred provided by middleware" });
         context.Response.ContentType = "application/json";
         context.Response.StatusCode = (int)code;
 

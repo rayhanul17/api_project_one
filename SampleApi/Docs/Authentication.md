@@ -1,6 +1,6 @@
 # Authentication
 
-## 1. Register
+## Register
 ### Request
 ```json
 {
@@ -20,7 +20,7 @@
   "token": "JWT Token"
 }
 ```
-## 2. Login
+## Login
 ### Request
 ```json
 {  
